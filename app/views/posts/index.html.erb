@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-lg-8">
+    <h1>ブログ記事詳細</h1>
+    <table>
+      <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.title %> : <%= post.category %></td>
+        <td><%= link_to '詳細', post, class: "btn btn-default btn-xs" %></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

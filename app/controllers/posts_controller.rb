@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy, :show]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy,]
   # before_action :authenticate_user!
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
@@ -11,6 +11,7 @@ class PostsController < ApplicationController
 
   def show
     @comment = Comment.new
+
     # @comments = Comment.where(post_id: params[:id].to_i)
     # @comments = @post.comments
     # @comments = @post.comments.order(created_at: :desc)#新しいコメントを上にする
